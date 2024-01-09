@@ -1,24 +1,45 @@
 <?php
+
+// Définit le domaine de base pour les pages
 $domain = 'brief-med/';
 
+// URL de la page d'accueil
 $index_page = $domain;
+
+// URL de la page des produits
 $produits_page = $domain . 'produits.php';
+
+// URL de la page de contact
 $contact_page = $domain . 'contact.php';
 
+// Obtient l'URL actuelle
 $current_url = $_SERVER['SCRIPT_NAME'];
 
-if (strpos($index_page, $current_url) !== false || strpos($index_page . 'index.php', $current_url) !== false) {
-    $title = 'La boutique santé de Wonderland Pharma';
-} elseif (strpos($produits_page, $current_url)) {
-    $title = 'Nos Produits santé Wonderland Pharma';
-} elseif (strpos($contact_page, $current_url)) {
-    $title = 'Contactez-nous';
+// Détermine le titre de la page en fonction de l'URL actuelle
+switch(true) {
+    case strpos($index_page, $current_url) || strpos($index_page . 'index.php', $current_url):
+        // Titre pour la page d'accueil
+        $title = 'La boutique santé de Wonderland Pharma';
+        break;
+
+    case strpos($produits_page, $current_url):
+        // Titre pour la page des produits
+        $title = 'Nos Produits santé Wonderland Pharma';
+        break;
+
+    case strpos($contact_page, $current_url):
+        // Titre pour la page de contact
+        $title = 'Contactez-nous';
+        break;
 }
 
+// Fonction pour déterminer si une page est active
 function isActive($current_url, $url) {
     if ($current_url == $url) {
+        // Retourne 'active' si l'URL actuelle correspond à l'URL donnée
         return 'active';
     } else {
+        // Retourne une chaîne vide dans le cas contraire
         return '';
     }
 }
