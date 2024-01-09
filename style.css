@@ -5,3 +5,10 @@
 * {
     font-family: 'Playfair Display', serif;
 }
+
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #FF4500;
+    --tertiary-color: #FFA500;
+    --text-color: #000;
+}
