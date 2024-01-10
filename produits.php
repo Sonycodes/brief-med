@@ -5,14 +5,14 @@
 
     // Créer un tableau de données à afficher dans les cards
     $docteurs = array(
-        array("titre" => "!Drink Me", "texte" => "Une potion qui vous fait rétrécir ou grandir selon la quantité que vous buvez. Attention à ne pas en abuser !", "image" => "drink_me.jpeg", "prix" => "9.99€"),
-        array("titre" => "!Eat Me", "texte" => "Un gâteau qui vous fait changer de taille selon la part que vous mangez. Idéal pour explorer des endroits inaccessibles !", "image" => "eat_me.jpeg", "prix" => "12.99€"),
-        array("titre" => "!Upelkuchen", "texte" => "Un biscuit qui vous fait changer de couleur selon la saveur que vous choisissez. Parfait pour vous camoufler ou vous amuser !", "image" => "upelkuchen.jpeg", "prix" => "14.99€"),
-        array("titre" => "!Jabberwocky Blood", "texte" => "Un élixir qui vous donne des pouvoirs magiques pendant une courte durée. Utilisez-le avec prudence !", "image" => "jabberwocky_Blood.jpeg", "prix" => "19.99€"),
-        array("titre" => "!Outlandish", "texte" => "Une pilule qui vous fait changer de personnalité selon l’humeur que vous souhaitez. Idéale pour vous évader ou vous surprendre !", "image" => "outlandish.jpeg", "prix" => "16.99€"),
-        array("titre" => "!Rose me", "texte" => "Un médicament qui vous transforme en une rose rouge. Vous pouvez ainsi embellir le jardin de la Reine de cœur, mais attention à ne pas vous faire couper !", "image" => "rose_me.jpeg", "prix" => "11.99€"),
-        array("titre" => "!Chess me", "texte" => "Un médicament qui vous fait entrer dans le jeu d’échecs vivant. Vous pouvez ainsi devenir un pion, un fou, une tour, un cavalier, un roi ou une reine, mais attention à ne pas vous faire échec et mat !", "image" => "chess_me.jpeg", "prix" => "6.99€"),
-        array("titre" => "!Wonderland Tea", "texte" => "Un thé qui vous transporte dans le monde merveilleux d’Alice. Attention, vous ne contrôlez pas le temps ni le lieu de votre retour !", "image" => "wonderland_Tea.jpeg", "prix" => "24.99€")
+        array("titre" => "!Drink Me", "texte" => "Une potion qui vous fait rétrécir ou grandir selon la quantité que vous buvez. Attention à ne pas en abuser !", "image" => "drink_me.webp", "prix" => "9.99€"),
+        array("titre" => "!Eat Me", "texte" => "Un gâteau qui vous fait changer de taille selon la part que vous mangez. Idéal pour explorer des endroits inaccessibles !", "image" => "eat_me.webp", "prix" => "12.99€"),
+        array("titre" => "!Upelkuchen", "texte" => "Un biscuit qui vous fait changer de couleur selon la saveur que vous choisissez. Parfait pour vous camoufler ou vous amuser !", "image" => "upelkuchen.webp", "prix" => "14.99€"),
+        array("titre" => "!Jabberwocky Blood", "texte" => "Un élixir qui vous donne des pouvoirs magiques pendant une courte durée. Utilisez-le avec prudence !", "image" => "jabberwocky_Blood.webp", "prix" => "19.99€"),
+        array("titre" => "!Outlandish", "texte" => "Une pilule qui vous fait changer de personnalité selon l’humeur que vous souhaitez. Idéale pour vous évader ou vous surprendre !", "image" => "outlandish.webp", "prix" => "16.99€"),
+        array("titre" => "!Rose me", "texte" => "Un médicament qui vous transforme en une rose rouge. Vous pouvez ainsi embellir le jardin de la Reine de cœur, mais attention à ne pas vous faire couper !", "image" => "rose_me.webp", "prix" => "11.99€"),
+        array("titre" => "!Chess me", "texte" => "Un médicament qui vous fait entrer dans le jeu d’échecs vivant. Vous pouvez ainsi devenir un pion, un fou, une tour, un cavalier, un roi ou une reine, mais attention à ne pas vous faire échec et mat !", "image" => "chess_me.webp", "prix" => "6.99€"),
+        array("titre" => "!Wonderland Tea", "texte" => "Un thé qui vous transporte dans le monde merveilleux d’Alice. Attention, vous ne contrôlez pas le temps ni le lieu de votre retour !", "image" => "wonderland_Tea.webp", "prix" => "24.99€")
     );
 
     // Créer une boucle for pour parcourir le tableau de données
