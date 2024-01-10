@@ -16,33 +16,60 @@ $contact_page = $domain . 'contact.php';
 $current_url = $_SERVER['SCRIPT_NAME'];
 
 // Détermine le titre de la page en fonction de l'URL actuelle
-switch(true) {
+switch (true) {
     case strpos($index_page, $current_url) || strpos($index_page . 'index.php', $current_url):
         // Titre pour la page d'accueil
         $title = 'La boutique santé de Wonderland Pharma';
+        // Id pour le body de la page d'accueil'
+        $bodyId = 'home';
         break;
 
     case strpos($produits_page, $current_url):
         // Titre pour la page des produits
         $title = 'Nos Produits santé Wonderland Pharma';
+        // Id pour le body de la page des produits
+        $bodyId = 'products';
         break;
 
     case strpos($contact_page, $current_url):
         // Titre pour la page de contact
         $title = 'Contactez-nous';
+        // Id pour le body de la page contact
+        $bodyId = 'contact';
         break;
-}
+};
+
+$navlinks = [
+    'accueil' => [
+        'link_url' => '/',
+        'link_url2' => '/index.php',
+        'link_title' => 'Accueil',
+    ],
+    'produits' => [
+        'link_url' => '/produits.php',
+        'link_url2' => '',
+        'link_title' => 'Produits',
+    ],
+    'contact' => [
+        'link_url' => '/contact.php',
+        'link_url2' => '',
+        'link_title' => 'Contact',
+    ]
+];
 
 // Fonction pour déterminer si une page est active
-function isActive($current_url, $url) {
-    if ($current_url == $url) {
+function isActive($current_url, $url, $url2)
+{
+    if ($current_url === $url) {
         // Retourne 'active' si l'URL actuelle correspond à l'URL donnée
+        return 'active';
+    } elseif ($current_url === $url2) {
         return 'active';
     } else {
         // Retourne une chaîne vide dans le cas contraire
-        return '';
+        return 'false';
     }
-}
+};
 
 // var_dump(isActive($current_url, $index_page));
 // var_dump('Current URL : ' . $current_url);
@@ -74,26 +101,21 @@ function isActive($current_url, $url) {
     <title><?php echo $title ?></title>
 </head>
 
-<body>
+<body id="<?php echo $bodyId ?>">
     <header>
-
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Navbar</a>
+                <a class="navbar-brand" href="/"><img src="../img/wonderland-pharma.png" alt="logo" class="w-25"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link <?= isActive($current_url, '/') ?> <?= isActive($current_url, '/index.php') ?>" href="/">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?= isActive($current_url, '/produits.php') ?>" href="/produits.php">Nos produits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?= isActive($current_url, '/contact.php') ?>" href="/contact.php">Contact</a>
-                        </li>
+                    <ul class="navbar-nav fs-3">
+                        <?php
+                        foreach ($navlinks as $key => $value) {
+                            echo "<li class=\"nav-item\"><a class=\"nav-link " . isActive($current_url, $value['link_url'], $value['link_url2']) . "\"" . "href=\"" . $value['link_url'] . "\">" . $value['link_title'] . "</a></li>";
+                        };
+                        ?>
                     </ul>
                 </div>
             </div>
