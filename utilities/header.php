@@ -39,6 +39,8 @@ switch (true) {
         break;
 };
 
+
+// Liens de navigation et titre des liens stockés dans un tableau multidimensionnel
 $navlinks = [
     'accueil' => [
         'link_url' => '/',
@@ -58,16 +60,15 @@ $navlinks = [
 ];
 
 // Fonction pour déterminer si une page est active
+// Elle prend trois arguments : l'URL actuelle, l'URL de la page à vérifier et une URL de secours optionnelle
 function isActive($current_url, $url, $url2)
 {
-    if ($current_url === $url) {
+    if ($current_url === $url || $current_url === $url2) {
         // Retourne 'active' si l'URL actuelle correspond à l'URL donnée
-        return 'active';
-    } elseif ($current_url === $url2) {
         return 'active';
     } else {
         // Retourne une chaîne vide dans le cas contraire
-        return 'false';
+        return '';
     }
 };
 
@@ -98,10 +99,10 @@ function isActive($current_url, $url, $url2)
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-    <title><?php echo $title ?></title>
+    <title><?= $title ?></title>
 </head>
 
-<body id="<?php echo $bodyId ?>">
+<body id="<?= $bodyId ?>">
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -112,6 +113,8 @@ function isActive($current_url, $url, $url2)
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav fs-3">
                         <?php
+                        // Génère dynamiquement une liste de liens de navigation en utilisant des données stockées dans un tableau multidimensionnel. 
+                        // La liste est mise à jour automatiquement en fonction de l'URL actuelle.
                         foreach ($navlinks as $key => $value) {
                             echo "<li class=\"nav-item\"><a class=\"nav-link " . isActive($current_url, $value['link_url'], $value['link_url2']) . "\"" . "href=\"" . $value['link_url'] . "\">" . $value['link_title'] . "</a></li>";
                         };
