@@ -13,9 +13,13 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Politique de confidentialité</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white">À propos</a></li>
     </ul>
-    <p class="text-center text-white">Copyright <?= date('Y') ?> Tous droits réservés.c</p>
+    <p class="text-center text-white">
+        <!-- La fonction PHP Date est utilisé pour afficher l’année en cours en PHP. Y = Année -->
+        Copyright <?= date('Y') ?> Tous droits réservés.
+    </p>
 
 </footer>
 </body>
 
 </html>
+

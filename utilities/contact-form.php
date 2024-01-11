@@ -2,27 +2,111 @@
     <h2 class="text-center">Formulaire de contact</h2>
     <form class="p-4 mb-5 " action="" method="GET">
         <div class="col d-flex flex-column justify-content-center w-75 container">
-            <div class="row row-cols-md-2 row-cols-1 mb-3">
-                <div class="col">
-                    <label for="prenom" class="form-label">Prénom</label>
-                    <input type="text" class="form-control rounded-0" name="prenom" id="prenom">
-                </div>
-                <div class="col">
-                    <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control rounded-0" name="nom" id="nom">
-                </div>
-            </div>
+            <?php
+            $input1 = [
+                array(
+                    "for" => "prenom",
+                    "type" => "text",
+                    "name" => "prenom",
+                    "id" => "prenom",
+                    "textlabel" => "Prénom",
+                    "div_class" => "col",
+                    "input_class" => "form-control rounded-0"
+                ),
+                  array(
+                    "for" => "nom",
+                    "type" => "text",
+                    "name" => "nom",
+                    "id" => "nom",
+                    "textlabel" => "Nom",
+                    "div_class" => "col",
+                    "input_class" => "form-control rounded-0"
+                  ),
+                ];
+                $input2 = [
+                      array(
+                        "for" => "email",
+                        "type" => "email",
+                        "name" => "email",
+                        "id" => "email",
+                        "textlabel" => "Email",
+                        "div_class" => "mb-3",
+                        "input_class" => "form-control rounded-0"
+                      ),
+                      array(
+                        "for" => "sujet",
+                        "type" => "text",
+                        "name" => "sujet",
+                        "id" => "sujet",
+                        "textlabel" => "Sujet",
+                        "div_class" => "mb-3",
+                        "input_class" => "form-control rounded-0"
+                      ),
+                    ];
+                
+             // Créer le premier élément div englobant
+            // echo "<div class=\"d-flex flex-column justify-content-center w-75 container\">";
+            
+            // Créer le deuxième élément div avec la classe row
+            echo "<div class=\"row row-cols-md-2 row-cols-1 mb-3\">";
+            
+            // Parcourir le tableau avec une boucle foreach
+            foreach ($input1 as $item) {
+              // Récupérer les valeurs du tableau
+              $for = $item["for"];
+              $type = $item["type"];
+              $name = $item["name"];
+              $id = $item["id"];
+              $textLabel = $item["textlabel"];
+              $div_class = $item["div_class"];
+              $input_class = $item["input_class"];
+            
+              // Créer un élément div avec la classe correspondante
+              echo "<div class=\"$div_class\">";
+            
+              // Créer un élément label avec les attributs correspondants
+              echo "<label for=\"$for\" class=\"form-label\">$textLabel</label>";
+            
+              // Créer un élément input avec les attributs et la classe correspondants
+              echo "<input type=\"$type\" class=\"$input_class\" name=\"$name\" id=\"$id\"/>";
+            
+              // Fermer l'élément div
+              echo "</div>";
+            
+            }
+            
+            // Fermer le deuxième élément div
+            echo "</div>";
+            
+            foreach ($input2 as $item) {
+                // Récupérer les valeurs du tableau
+                $for = $item["for"];
+                $type = $item["type"];
+                $name = $item["name"];
+                $id = $item["id"];
+                $textLabel = $item["textlabel"];
+                $div_class = $item["div_class"];
+                $input_class = $item["input_class"];
+              
+                // Créer un élément div avec la classe correspondante
+                echo "<div class=\"$div_class\">";
+              
+                // Créer un élément label avec les attributs correspondants
+                echo "<label for=\"$for\" class=\"form-label\">$textLabel</label>";
+              
+                // Créer un élément input avec les attributs et la classe correspondants
+                echo "<input type=\"$type\" class=\"$input_class\" name=\"$name\" id=\"$id\"/>";
+              
+                // Fermer l'élément div
+                echo "</div>";
+              
+              }
+            
+            ?>
+
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control rounded-0" name="email" id="email">
-            </div>
-            <div class="mb-3">
-                <label for="sujet" class="form-label">Sujet</label>
-                <input type="text" class="form-control rounded-0" name="sujet" id="sujet">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label" name="message">Message</label>
-                <textarea class="form-control rounded-0" id="message" rows="3"></textarea>
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control rounded-0" id="message" name="message" rows="3"></textarea>
             </div>
             <div class="d-flex justify-content-center">
                 <input type="submit" class="btn btn-primary rounded-0 bg-blue border-0">
@@ -34,6 +118,17 @@
     </form>
 
 </section>
+<?php
+
+// Créer un tableau de données à afficher dans les cards
+$input = array(
+    array("prenom" => "prenom", "txt-p" => "Prénom"),
+    array("nom" => "nom", "txt-n" => "Nom"),
+    array("email" => "email", "txt-m" => "Mail"),
+    array("sujet" => "sujet", "txt-s" => "Sujet"),
+);
+  
+?>
 
 <?php
 

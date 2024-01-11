@@ -99,7 +99,6 @@ function isActive($current_url, $url, $url2)
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-
     <title><?= $title ?></title>
 </head>
 
@@ -108,7 +107,8 @@ function isActive($current_url, $url, $url2)
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><img src="../img/wonderland-pharma.png" alt="logo" class="w-75"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -117,7 +117,8 @@ function isActive($current_url, $url, $url2)
                         // Génère dynamiquement une liste de liens de navigation en utilisant des données stockées dans un tableau multidimensionnel. 
                         // La liste est mise à jour automatiquement en fonction de l'URL actuelle.
                         foreach ($navlinks as $key => $value) {
-                            echo "<li class=\"nav-item\"><a class=\"nav-link text-center " . isActive($current_url, $value['link_url'], $value['link_url2']) . "\"" . "href=\"" . $value['link_url'] . "\">" . $value['link_title'] . "</a></li>";
+                            echo "<li class=\"nav-item\"><a class=\"nav-link text-center " . isActive($current_url, $value['link_url'], 
+                            $value['link_url2']) . "\"" . "href=\"" . $value['link_url'] . "\">" . $value['link_title'] . "</a></li>";
                         };
                         ?>
                     </ul>
@@ -127,3 +128,4 @@ function isActive($current_url, $url, $url2)
     </header>
 
     <main>
+

@@ -4,7 +4,7 @@
 <section>
     <div class="container my-5">
         <h2 class="d-flex justify-content-center fs-1">Présentation :</h2>
-        <p class="fs-22">Bienvenue au laboratoire pharmaceutique d'Alice au Pays des Merveilles, un établissement unique où la science et la magie se rencontrent pour créer des médicaments extraordinaires.
+        <p class="fs-22">Bienvenue au laboratoire pharmaceutique Wonderland Pharma, un établissement unique où la science et la magie se rencontrent pour créer des médicaments extraordinaires.
             Notre équipe dévouée de chercheurs et d'alchimistes travaille sans relâche pour développer des formulations révolutionnaires qui permettent à nos clients de changer de taille, de couleur,
             ou même d'acquérir des pouvoirs magiques. Inspiré par l'univers fantastique de Lewis Carroll, notre laboratoire est déterminé à repousser les limites de la réalité et à offrir des expériences
             pharmacologiques inédites. Que vous cherchiez à explorer de nouveaux horizons dimensionnels ou à embrasser votre côté fantastique, notre gamme de produits innovants est conçue pour émerveiller et surprendre.
