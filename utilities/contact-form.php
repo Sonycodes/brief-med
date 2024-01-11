@@ -3,34 +3,34 @@
     <form class="p-4 mb-5 " action="" method="GET">
         <div class="col d-flex flex-column justify-content-center w-75 container">
             <div class="row row-cols-md-2 row-cols-1 mb-3">
-            <div class="col">
-              <label for="prenom" class="form-label">Prénom</label>
-            <input type="text" class="form-control rounded-0" name="prenom" id="prenom">  
+                <div class="col">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" class="form-control rounded-0" name="prenom" id="prenom">
+                </div>
+                <div class="col">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control rounded-0" name="nom" id="nom">
+                </div>
             </div>
-            <div class="col">
-             <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control rounded-0" name="nom" id="nom">   
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control rounded-0" name="email" id="email">
             </div>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control rounded-0" name="email" id="email">
-        </div>
-        <div class="mb-3">
-            <label for="sujet" class="form-label">Sujet</label>
-            <input type="text" class="form-control rounded-0" name="sujet" id="sujet">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label" name="message">Message</label>
-            <textarea class="form-control rounded-0" id="message" rows="3"></textarea>
-        </div>
-        <div class="d-flex justify-content-center">
-            <input type="submit" class="btn btn-primary rounded-0 bg-blue border-0">    
+            <div class="mb-3">
+                <label for="sujet" class="form-label">Sujet</label>
+                <input type="text" class="form-control rounded-0" name="sujet" id="sujet">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label" name="message">Message</label>
+                <textarea class="form-control rounded-0" id="message" rows="3"></textarea>
+            </div>
+            <div class="d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary rounded-0 bg-blue border-0">
+            </div>
+
+
         </div>
 
-        
-        </div>
-       
     </form>
 
 </section>

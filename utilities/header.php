@@ -16,6 +16,7 @@ $contact_page = $domain . 'contact.php';
 $current_url = $_SERVER['SCRIPT_NAME'];
 
 // Détermine le titre de la page en fonction de l'URL actuelle
+// switch (true) est utilisé pour vérifier plusieurs conditions. Chaque case dans le switch est une expression qui renvoie un booléen. Si l’expression est vraie, le code associé à ce case est exécuté.
 switch (true) {
     case strpos($index_page, $current_url) || strpos($index_page . 'index.php', $current_url):
         // Titre pour la page d'accueil
