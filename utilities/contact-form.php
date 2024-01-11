@@ -44,7 +44,7 @@
                       ),
                     ];
                 
-             // Créer le premier élément div englobant
+            // Créer le premier élément div englobant
             // echo "<div class=\"d-flex flex-column justify-content-center w-75 container\">";
             
             // Créer le deuxième élément div avec la classe row
@@ -71,8 +71,7 @@
               echo "<input type=\"$type\" class=\"$input_class\" name=\"$name\" id=\"$id\"/>";
             
               // Fermer l'élément div
-              echo "</div>";
-            
+              echo "</div>";         
             }
             
             // Fermer le deuxième élément div
@@ -101,7 +100,6 @@
                 echo "</div>";
               
               }
-            
             ?>
 
             <div class="mb-3">
@@ -111,13 +109,11 @@
             <div class="d-flex justify-content-center">
                 <input type="submit" class="btn btn-primary rounded-0 bg-blue border-0">
             </div>
-
-
         </div>
-
     </form>
 
 </section>
+
 <?php
 
 // Créer un tableau de données à afficher dans les cards
