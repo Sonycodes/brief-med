@@ -33,16 +33,16 @@
 // Vérifie si les clés 'prenom', 'nom', 'email', et 'sujet' existent dans $_GET avant d'y accéder
 // https://www.php.net/manual/fr/function.isset.php
 if ($prenom = isset($_GET['prenom'])) {
-    $prenom = $_GET['prenom'];
+    $prenom = htmlspecialchars($_GET['prenom']);
 } else {
     $prenom = null;
 }
 
 // Ternaire
-$nom = isset($_GET['nom']) ? $_GET['nom'] : null;
-$email = isset($_GET['email']) ? $_GET['email'] : null;
-$sujet = isset($_GET['sujet']) ? $_GET['sujet'] : null;
-$message = isset($_GET['message']) ? $_GET['message'] : null;
+$nom = isset($_GET['nom']) ? htmlspecialchars($_GET['nom']) : null;
+$email = isset($_GET['email']) ? htmlspecialchars($_GET['email']) : null;
+$sujet = isset($_GET['sujet']) ? htmlspecialchars($_GET['sujet']) : null;
+$message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : null;
 
 // Si on utilise ce code il affichera un warning
 // $prenom = $_GET['prenom'];
