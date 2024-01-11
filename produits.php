@@ -23,6 +23,7 @@
         $image = $docteurs[$i]["image"];
         $prix = $docteurs[$i]["prix"];
 
+        // code html de base pour les cards
         echo "
         <div class=\"card col text-center m-3 p-0 rounded-0\" style=\"width: 300px;\">
             <img src=\"./img/produits/$image\" class=\"card-img-top rounded-0\" alt=\"$titre\">
@@ -30,7 +31,7 @@
               <h5 class=\"card-title\">$titre</h5>
               <p class=\"card-text\">$texte</p>
               <p class=\"card-text\"><small class=\"text-muted\">Prix: $prix </small></p>
-              <a href=\"#\" class=\"btn btn-primary rounded-0\">Acheter</a>
+              <a href=\"./error.php\" class=\"btn bg-blue text-white rounded-0\">Acheter</a>
            </div>
           </div>
        ";

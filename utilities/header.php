@@ -106,7 +106,7 @@ function isActive($current_url, $url, $url2)
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="../img/wonderland-pharma.png" alt="logo" class="w-25"></a>
+                <a class="navbar-brand" href="/"><img src="../img/wonderland-pharma.png" alt="logo" class="w-75"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -116,7 +116,7 @@ function isActive($current_url, $url, $url2)
                         // Génère dynamiquement une liste de liens de navigation en utilisant des données stockées dans un tableau multidimensionnel. 
                         // La liste est mise à jour automatiquement en fonction de l'URL actuelle.
                         foreach ($navlinks as $key => $value) {
-                            echo "<li class=\"nav-item\"><a class=\"nav-link " . isActive($current_url, $value['link_url'], $value['link_url2']) . "\"" . "href=\"" . $value['link_url'] . "\">" . $value['link_title'] . "</a></li>";
+                            echo "<li class=\"nav-item\"><a class=\"nav-link text-center " . isActive($current_url, $value['link_url'], $value['link_url2']) . "\"" . "href=\"" . $value['link_url'] . "\">" . $value['link_title'] . "</a></li>";
                         };
                         ?>
                     </ul>
